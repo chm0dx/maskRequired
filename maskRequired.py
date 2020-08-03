@@ -7,7 +7,7 @@ inFileArg = sys.argv[1]
 stats = {}
 
 with open(inFileArg) as inFile:
-	for line in inFile:
+	for line in open(inFileArg, encoding="ISO-8859-1"):
 		try:
 			line.encode('ascii')
 		except UnicodeEncodeError:
